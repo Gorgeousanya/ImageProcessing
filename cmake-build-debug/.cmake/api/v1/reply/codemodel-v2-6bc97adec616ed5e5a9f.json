@@ -1,0 +1,139 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "prj.labs",
+					"childIndexes" : 
+					[
+						2,
+						3
+					],
+					"jsonFile" : "directory-prj.labs-Debug-a70326121615cf22b8ee.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "prj.labs"
+				},
+				{
+					"build" : "prj.labs/lab01",
+					"jsonFile" : "directory-prj.labs.lab01-Debug-8258eab9d13112ad836c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "prj.labs/lab01",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "prj.labs/lab02",
+					"jsonFile" : "directory-prj.labs.lab02-Debug-9c01d80560ae78e0586c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 2,
+					"source" : "prj.labs/lab02",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "plokhotnyuk_a_d"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "lab01",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "lab02",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "lab01::@1c300cf84767a8afbacc",
+					"jsonFile" : "target-lab01-Debug-68c75b975f95beb93755.json",
+					"name" : "lab01",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "lab02::@5c01f0491040e4237955",
+					"jsonFile" : "target-lab02-Debug-1daf43a130864922bf2b.json",
+					"name" : "lab02",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug",
+		"source" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
