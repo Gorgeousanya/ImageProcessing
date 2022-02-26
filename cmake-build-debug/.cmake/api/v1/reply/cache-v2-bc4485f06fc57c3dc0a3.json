@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "4"
+			"value" : "5"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1172,6 +1172,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab02"
+		},
+		{
+			"name" : "lab03_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab03"
+		},
+		{
+			"name" : "lab03_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "lab03_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab03"
 		},
 		{
 			"name" : "plokhotnyuk_a_d_BINARY_DIR",

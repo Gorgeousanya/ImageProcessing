@@ -64,9 +64,9 @@ cv::Mat histogram(cv::Mat image, std::vector<cv::Mat> rgbChannels){
 }
 
 int main() {
-    cv::Mat img = cv::imread( "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/data/cross_0256x0256.png");
+    cv::Mat img = cv::imread( "..\\..\\..\\data\\cross_0256x0256.png");
     cv::imwrite("cross_0256x0256_025.jpg", img, {cv::IMWRITE_JPEG_QUALITY, 25});
-    cv::Mat img_25 = cv::imread("/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/bin.dbg/cross_0256x0256_025.jpg");
+    cv::Mat img_25 = cv::imread("..\\..\\..\\bin.dbg\\cross_0256x0256_025.jpg");
     std::vector<cv::Mat> rgbChannels(3), rgbChannels_25;
     split(img, rgbChannels);
     split(img_25, rgbChannels_25);

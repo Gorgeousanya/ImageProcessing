@@ -1,4 +1,4 @@
-# Install script for directory: /Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs
+# Install script for directory: /Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab03
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,13 +35,5 @@ endif()
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/Library/Developer/CommandLineTools/usr/bin/objdump")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab01/cmake_install.cmake")
-  include("/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab02/cmake_install.cmake")
-  include("/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab03/cmake_install.cmake")
-
 endif()
 

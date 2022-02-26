@@ -1,6 +1,6 @@
 ## Работа 1. Исследование гамма-коррекции
 автор: Плохотнюк А. Д.
-дата: 2022-02-22T11:16:20
+дата: 2022-02-26T17:37:27
 
 -- url: https://github.com/Gorgeousanya/ImageProcessing --
 
@@ -20,7 +20,6 @@
 
 ```cpp
 #include <opencv2/opencv.hpp>
-#include <chrono>
 
 int main() {
   cv::Mat img1(60, 768, CV_8UC1);
@@ -40,24 +39,22 @@ int main() {
   cv::Mat img2;
   img1.convertTo(img2, CV_64F, 1.0 / 255.0);
   float gamma = 2.2;
-  auto begin = std::chrono::steady_clock::now();
+  double t1 = (double)cv::getTickCount();
   cv::pow(img2, gamma, img2);
-  auto end = std::chrono::steady_clock::now();
-  auto ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-  std::cout << "Время в мс, затраченное на гамма-коррекцию с помощью pow: " <<ms.count() << '\n';
+  double t2 = (double)cv::getTickCount();
+  std::cout << "Время в мс, затраченное на гамма-коррекцию с помощью pow: " <<1000 * ((t2 - t1) / cv::getTickFrequency()) << '\n';
   img2.convertTo(img2, CV_8UC1, 255., 0);
 
   cv::Mat img3;
   img1.convertTo(img3, CV_64F, 1.0);
-  begin = std::chrono::steady_clock::now();
+  t1 = (double)cv::getTickCount();
   for(int y = 0; y < 60; y++){
       for(int x = 0; x < 768; x++) {
           img3.at<double>(y, x) = cv::pow(img3.at<double>(y, x)/255, gamma)*255.0;
       }
   }
-  end = std::chrono::steady_clock::now();
-  ms = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
-  std::cout << "Время в мс, затраченное на гамма-коррекцию с помощью прямого обращения к пикселям : " <<ms.count()<< '\n';
+  t2 = (double)cv::getTickCount();
+  std::cout << "Время в мс, затраченное на гамма-коррекцию с помощью прямого обращения к пикселям : " <<1000 * ((t2 - t1) / cv::getTickFrequency()) << '\n';
   img3.convertTo(img3, CV_8UC1, 1.0 , 0);
 
   // save result

@@ -226,6 +226,15 @@ lab02_IS_TOP_LEVEL:STATIC=OFF
 lab02_SOURCE_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab02
 
 //Value Computed by CMake
+lab03_BINARY_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab03
+
+//Value Computed by CMake
+lab03_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+lab03_SOURCE_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab03
+
+//Value Computed by CMake
 plokhotnyuk_a_d_BINARY_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug
 
 //Value Computed by CMake
@@ -336,7 +345,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
