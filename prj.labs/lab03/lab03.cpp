@@ -20,6 +20,8 @@ int main() {
 
     cv::Mat graph(cv::Mat::ones(512, 512, CV_8UC1) * 255);
     int max = 0;
+    line(graph, cv::Point(0, 512), cv::Point(0, 0), { 0 }, 2, 8, 0);
+    line(graph, cv::Point(0, 512), cv::Point(512, 512), { 0 }, 2, 8, 0);
     for (int i = 0; i < 256; i++) {
         uchar val(lut.at<uchar>(i));
         if (val > max) {
