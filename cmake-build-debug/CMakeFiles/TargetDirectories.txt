@@ -14,3 +14,6 @@
 /Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab04/CMakeFiles/rebuild_cache.dir
 /Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab04/CMakeFiles/edit_cache.dir
 /Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab04/CMakeFiles/lab04.dir
+/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab05/CMakeFiles/rebuild_cache.dir
+/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab05/CMakeFiles/edit_cache.dir
+/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab05/CMakeFiles/lab05.dir

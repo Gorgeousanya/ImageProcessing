@@ -1,4 +1,4 @@
-## Работа 4. Использование бинаризации для анализа изображений (выделение символов)
+## Работа 5. Детектирование границ документов на кадрах видео
 автор: Плохотнюк А. Д.
 дата: 2022-04-09T10:54:33
 
@@ -6,49 +6,12 @@ url: https://github.com/Gorgeousanya/ImageProcessing
 
 ### Задание
 0. текст, иллюстрации и подписи отчета придумываем самостоятельно
-1. самостоятельно снимаем видео смартфоном
-- объект съемки - купюры (рубли разного номинала), расправленные и лежащие на поверхности (проективно искаженны прямоугольник)
-- количество роликов - от 5 шт.
-- длительность - 5-7 сек
-- условия съемки разные
-2. извлекаем по 3 кадра из каждого ролика (делим кол-во кадров на 5 и берем каждый с индеком 2/5,3/5,4/5)
-3. цветоредуцируем изображения
-4. бинаризцем изображения
-5. морфологически обрабатываем изображения
-6. выделяем основную компоненту связности
-7. руками изготавливаем маски (идеальная зона купюры)
-8. оцениваем качество выделение зоны и анализируем ошибки
+1. используем данные из лаб. 4
+2. выделяем границы и находим внешнюю рамку документа
+3. руками изготавливаем векторную разметку (идеальная рамка купюры)
+4. оцениваем качество и анализируем ошибки
+
 ### Результаты
-
-![](lab04.src.jpg)
-Рис. 1. Исходное тестовое изображение
-
-![](lab04.g1.png)
-Рис. 2. Визуализация результата $G_1$ цветоредукции
-
-![](lab04.b1.png)
-Рис. 3. Визуализация результата бинаризаии $B_1$
-
-![](lab04.f1.png)
-Рис. 4. Визуализация результата $F_1$ фильтрации бинаризованного изображения $B_1$
-
-![](lab04.v1.png)
-Рис. 5. Визуализация результатов фильтрации компонент связности $V_1$
-
-![](lab04.e1.png)
-Рис. 6. Визуализация отклонений от эталона $E_1$
-
-![](lab04.b2.png)
-Рис. 7. Визуализация результата бинаризаии $B_2$ (метод с гауссовым окном)
-
-![](lab04.f2.png)
-Рис. 8. Визуализация результата $F_2$ фильтрации бинаризованного изображения $B_2$
-
-![](lab04.v2.png)
-Рис. 9. Визуализация результатов фильтрации компонент связности $V_2$ (метод с гауссовым окном)
-
-![](lab04.e2.png)
-Рис. 10. Визуализация отклонений от эталона $E_2$ (метод с гауссовым окном)
 
 ### Текст программы
 
@@ -143,25 +106,25 @@ void results(cv::VideoCapture cap, int index){
         cv::imwrite("filter.png" , filt);
 
         //выделение компонент связности
-        cv::connectedComponentsWithStats(filt, labels, stats, centroids);
-        int max_i = 0, max_s = 0;
-        for (int i = 0; i < stats.rows; i++) {
-            if ((stats.at<int>(i, 4) > max_s)&&(stats.at<int>(i, 0)!=0)&&(stats.at<int>(i, 1)!=0)) {
-                max_i = i;
-                max_s = stats.at<int>(i, 4);
-            }
-        }
-        int x = stats.at<int>(max_i, 0), y = stats.at<int>(max_i, 1),
-        x1 = centroids.at<double>(max_i, 0), y1 = centroids.at<double>(max_i, 1),
-        width = stats.at<int>(max_i, 2), height = stats.at<int>(max_i, 3);
-        std::vector<cv::Point> point;
-        point.push_back(cv::Point(x1-width/2.0, y1 + height/2.0));
-        point.push_back(cv::Point(x, y));
-        point.push_back(cv::Point(x1+width/2.0, y1 - height/2.0 ));
-        point.push_back(cv::Point(x1+width/2.0, y1 + height/2.0));
-        cv::Mat banknote(filt.rows, filt.cols, filt.type(), cv::Scalar(0));
-        cv::fillPoly(banknote, point, cv::Scalar(255, 255, 255));
-        cv::imwrite("mask"+std::to_string(index)+"_"+std::to_string(i+1)+".png", banknote);
+//        cv::connectedComponentsWithStats(filt, labels, stats, centroids);
+//        int max_i = 0, max_s = 0;
+//        for (int i = 0; i < stats.rows; i++) {
+//            if ((stats.at<int>(i, 4) > max_s)&&(stats.at<int>(i, 0)!=0)&&(stats.at<int>(i, 1)!=0)) {
+//                max_i = i;
+//                max_s = stats.at<int>(i, 4);
+//            }
+//        }
+//        int x = stats.at<int>(max_i, 0), y = stats.at<int>(max_i, 1),
+//        x1 = centroids.at<double>(max_i, 0), y1 = centroids.at<double>(max_i, 1),
+//        width = stats.at<int>(max_i, 2), height = stats.at<int>(max_i, 3);
+//        std::vector<cv::Point> point;
+//        point.push_back(cv::Point(x1-width/2.0, y1 + height/2.0));
+//        point.push_back(cv::Point(x, y));
+//        point.push_back(cv::Point(x1+width/2.0, y1 - height/2.0 ));
+//        point.push_back(cv::Point(x1+width/2.0, y1 + height/2.0));
+//        cv::Mat banknote(filt.rows, filt.cols, filt.type(), cv::Scalar(0));
+//        cv::fillPoly(banknote, point, cv::Scalar(255, 255, 255));
+//        cv::imwrite("mask"+std::to_string(index)+"_"+std::to_string(i+1)+".png", banknote);
 
         //закрашивание компонент связности
 //        cv::Mat labelImage;
@@ -183,33 +146,34 @@ void results(cv::VideoCapture cap, int index){
 //        }
 
         // draw contours
-//        std::vector<std::vector<cv::Point>> contours;
-//        std::vector<cv::Vec4i> hierarchy;
-//        findContours(filt, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_NONE);
-//        cv::Mat image_copy = filt.clone();
-//        cv::drawContours(image_copy, contours, 1, cv::Scalar(0, 255, 0), -1);
+        std::vector<std::vector<cv::Point>> contours;
+        std::vector<cv::Vec4i> hierarchy;
+        findContours(filt, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_NONE);
+        cv::Mat image_copy = filt.clone();
+        cv::drawContours(image_copy, contours, 1, cv::Scalar(0, 255, 0), 1);
+        cv::imwrite("contour"+std::to_string(index)+"_"+std::to_string(i+1)+".png", image_copy);
 
 //        //шаблонная маска
-        cv::Mat mask_image(filt.rows, filt.cols, filt.type(), cv::Scalar(0, 0, 0));
-        mask(mask_image, "lab04_"+std::to_string(index)+"_"+std::to_string(i+1)+".png");
+//        cv::Mat mask_image(filt.rows, filt.cols, filt.type(), cv::Scalar(0, 0, 0));
+//        mask(mask_image, "lab04_"+std::to_string(index)+"_"+std::to_string(i+1)+".png");
 
         //оценка результатов
-        std::cout<<"Результаты сравнения качества для "<<index<<" видео "<<std::to_string(i+1)<<" кадра: "<<quality(banknote, mask_image)<<'\n';
-        cv::Mat final_img;
-//        cv::addWeighted(gray_img, 0.5 , img[i], 0.3, 0.0, final_img , -1);
+//        std::cout<<"Результаты сравнения качества для "<<index<<" видео "<<std::to_string(i+1)<<" кадра: "<<quality(banknote, mask_image)<<'\n';
+//        cv::Mat final_img;
+//       cv::addWeighted(gray_img, 0.5 , img[i], 0.3, 0.0, final_img , -1);
 //        cv::addWeighted(final_img, 0.5 , banknote, 0.3, 0.0, final_img , -1);
-        final_img=final(gray_img, banknote, mask_image);
-        cv::imwrite("final"+std::to_string(index)+"_"+std::to_string(i+1)+".png", final_img);
+//        final_img=final(gray_img, banknote, mask_image);
+//        cv::imwrite("final"+std::to_string(index)+"_"+std::to_string(i+1)+".png", final_img);
 
         //коллаж из изображений
 //        image.push_back(gray_img);
 //        image.push_back(bi);
 //        image.push_back(morph);
 //        image.push_back(banknote);
-        cv::hconcat(gray_img, bi, image);
-        cv::hconcat(image, morph, image);
-        cv::hconcat(image, banknote, image);
-        cv::imwrite("process.png", image);
+//        cv::hconcat(gray_img, bi, image);
+//        cv::hconcat(image, morph, image);
+//        cv::hconcat(image, banknote, image);
+//        cv::imwrite("process.png", image);
     }
 }
 

@@ -198,6 +198,12 @@
 		},
 		{
 			"path" : "prj.labs/lab04/lab04.report.md.in.txt"
+		},
+		{
+			"path" : "prj.labs/lab05/CMakeLists.txt"
+		},
+		{
+			"path" : "prj.labs/lab05/lab05.report.md.in.txt"
 		}
 	],
 	"kind" : "cmakeFiles",

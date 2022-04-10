@@ -243,6 +243,15 @@ lab04_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 lab04_SOURCE_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab04
 
+//Value Computed by CMake
+lab05_BINARY_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab05
+
+//Value Computed by CMake
+lab05_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+lab05_SOURCE_DIR:STATIC=/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab05
+
 //The directory containing a CMake configuration file for nlohmann_json.
 nlohmann_json_DIR:PATH=nlohmann_json_DIR-NOTFOUND
 
@@ -357,7 +366,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=7
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

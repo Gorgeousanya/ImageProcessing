@@ -25,7 +25,8 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6
 					],
 					"jsonFile" : "directory-prj.labs-Debug-a70326121615cf22b8ee.json",
 					"minimumCMakeVersion" : 
@@ -95,6 +96,21 @@
 					[
 						3
 					]
+				},
+				{
+					"build" : "prj.labs/lab05",
+					"jsonFile" : "directory-prj.labs.lab05-Debug-4fe1a188c38c7cb16106.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.8"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 5,
+					"source" : "prj.labs/lab05",
+					"targetIndexes" : 
+					[
+						4
+					]
 				}
 			],
 			"name" : "Debug",
@@ -106,7 +122,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					],
 					"directoryIndexes" : 
 					[
@@ -162,6 +179,18 @@
 					[
 						3
 					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						6
+					],
+					"name" : "lab05",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						4
+					]
 				}
 			],
 			"targets" : 
@@ -193,6 +222,13 @@
 					"jsonFile" : "target-lab04-Debug-80a0a0e22eff7715d2ce.json",
 					"name" : "lab04",
 					"projectIndex" : 4
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "lab05::@ad9961c5595907b74c49",
+					"jsonFile" : "target-lab05-Debug-5f68e414e2eac19fb6a1.json",
+					"name" : "lab05",
+					"projectIndex" : 5
 				}
 			]
 		}

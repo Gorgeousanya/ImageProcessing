@@ -679,7 +679,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "6"
+			"value" : "7"
 		},
 		{
 			"name" : "CMAKE_OBJCOPY",
@@ -1244,6 +1244,42 @@
 			],
 			"type" : "STATIC",
 			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab04"
+		},
+		{
+			"name" : "lab05_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/cmake-build-debug/prj.labs/lab05"
+		},
+		{
+			"name" : "lab05_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "OFF"
+		},
+		{
+			"name" : "lab05_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/Users/annaplokhotnyuk/Downloads/plokhotnyuk_a_d/prj.labs/lab05"
 		},
 		{
 			"name" : "nlohmann_json_DIR",
